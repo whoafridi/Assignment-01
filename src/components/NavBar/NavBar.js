@@ -13,7 +13,7 @@ const NavBar = ({ cart }) => {
 
       </div>
         <span className="nav_color">
-          <i className="fas fa-cart-plus btn">
+          <i className="fas fa-cart-plus nav-btn">
               <span>{cart.length}</span>
           </i>
         </span>

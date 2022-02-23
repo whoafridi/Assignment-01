@@ -19,3 +19,12 @@
     padding-left: 15px;
     text-decoration: dashed;
 }
+.nav-btn{
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    border-radius: 5px;
+    background: #ec8e12;
+    padding: 10px 10px;
+    box-sizing: border-box;
+  }

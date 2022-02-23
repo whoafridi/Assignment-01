@@ -6,17 +6,12 @@ const ProductDetail = ({ s }) => {
     <>
       <div class="hero">
         <div class="details-row">
-          <div class="details-col">
-            <div class="slider">
-              <div class="product">
-                <img src={img} alt=""/>
-                <img src={img} alt=""/>
-                <img src={img} alt=""/>
-              </div>
+          {/* <div class="details-col"> */}
+            {/* <div class="slider"> */}
               <div class="preview">
-                <img src={img} id="imagebox" alt="" />
-              </div>
-            </div>
+                <img class="preview-img" src={img} alt="" />
+              {/* </div> */}
+            {/* </div> */}
           </div>
           <div class="details-col">
             <div class="content">
@@ -29,18 +24,6 @@ const ProductDetail = ({ s }) => {
                 <i class="fa fa-star-half-o"></i>
               </div>
               <p class="price">{price}</p>
-              <p>
-                Size:{" "}
-                <select name="size">
-                  <option value="select size">select size</option>
-                  <option value="small">small</option>
-                  <option value="medium">medium</option>
-                  <option value="large">large</option>
-                </select>
-              </p>
-              <p>
-                Quantity: <input type="text" value="1" />
-              </p>
               <button className="details-cart" type="button">
                 <i class="fa fa-shopping-cart"></i>
                 Add to cart

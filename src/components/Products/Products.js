@@ -36,19 +36,6 @@ const Products = ({ handleAddToCart }) => {
           )}
         </div>
       </section>
-
-      <div className="next-prev">
-        <button>
-          <a target="_blank" href="#">
-            <i class="fas fa-arrow-left"></i>
-          </a>
-        </button>
-        <button>
-          <a target="_blank" href="#">
-            <i class="fas fa-arrow-right"></i>
-          </a>
-        </button>
-      </div>
     </>
   );
 };
