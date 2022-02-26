@@ -9,6 +9,7 @@ const NavBar = ({ cart }) => {
       <div>
       <span><Link className="nav" to='/'>Home</Link></span>
       <span><Link className="nav" to='/'>Products</Link></span>
+      <span><Link className="nav" to='/category'>Category</Link></span>
       <span><Link className="nav" to='/'>About</Link></span>
 
       </div>
