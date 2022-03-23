@@ -2,9 +2,12 @@ import React from "react";
 import "./Products.css";
 import Product from "../Product/Product";
 import useProducts from "../../hooks/useProducts";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartProvider";
 
 const Products = () => {
-  const { products } = useProducts();
+   const { products } = useContext(CartContext);
+  // const { products } = useProducts();
 
   const data = products.slice(0, 6);
 
