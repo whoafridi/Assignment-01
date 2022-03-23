@@ -17,13 +17,14 @@ const Category = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  const filteresult = (item) => {
-    let result = foods.filter((food) => {
-      return food.type === item;
-    });
-    console.log(result);
-    setFoods(result);
-  };
+  // const filterResult = (item) => {
+  //   if(item === 'all'){
+  //     setFoods(foods);
+  //     return;
+  //   }
+  // const result = foods.filter((food) => food.type === item);
+  // console.log(result);
+  // setFoods(result);
 
   const selectedFoods = foods.filter((food) => food.type === selectedFoodType);
   console.log(foods);
@@ -45,6 +46,7 @@ const Category = () => {
         <ul>
           <li
             onClick={() => setSelectedFoodType("Breakfast")}
+            // onClick={()=>filterResult('Breakfast')}
             className="nav-item"
           >
             <span
@@ -57,7 +59,11 @@ const Category = () => {
               Breakfast
             </span>
           </li>
-          <li onClick={() => setSelectedFoodType("Lunch")} className="nav-item">
+          <li
+            onClick={() => setSelectedFoodType("Lunch")}
+            //  onClick={()=>filterResult('Lunch')}
+            className="nav-item"
+          >
             <span
               className={
                 selectedFoodType === "Lunch" ? "active nav-link" : "nav-link"
@@ -68,6 +74,8 @@ const Category = () => {
           </li>
           <li
             onClick={() => setSelectedFoodType("Dinner")}
+            // onClick={()=>filterResult('Dinner')}
+
             className="nav-item"
           >
             <span

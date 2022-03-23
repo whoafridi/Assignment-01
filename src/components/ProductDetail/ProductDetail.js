@@ -1,31 +1,35 @@
+import { useContext } from "react";
+import { CartContext } from "../../context/CartProvider";
 import "./ProductDetail.css";
 
 const ProductDetail = ({ s }) => {
   const { img, description, name, price } = s;
+  const { handleAddToCart } = useContext(CartContext);
+
   return (
     <>
-      <div class="hero">
-        <div class="details-row">
-          {/* <div class="details-col"> */}
-            {/* <div class="slider"> */}
-              <div class="preview">
-                <img class="preview-img" src={img} alt="" />
-              {/* </div> */}
-            {/* </div> */}
+      <div className="hero">
+        <div className="details-row">
+          <div className="preview">
+            <img className="preview-img" src={img} alt={name} />
           </div>
-          <div class="details-col">
-            <div class="content">
+          <div className="details-col">
+            <div className="content">
               <h2>{name}</h2>
-              <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-half-o"></i>
+              <div className="rating">
+                <i className="fa fa-star"></i>
+                <i className="fa fa-star"></i>
+                <i className="fa fa-star"></i>
+                <i className="fa fa-star"></i>
+                <i className="fa fa-star-half-o"></i>
               </div>
-              <p class="price">{price}</p>
-              <button className="details-cart" type="button">
-                <i class="fa fa-shopping-cart"></i>
+              <p className="price">{price}</p>
+              <button
+                className="details-cart"
+                type="button"
+                onClick={() => handleAddToCart(s)}
+              >
+                <i className="fa fa-shopping-cart"></i>
                 Add to cart
               </button>
             </div>

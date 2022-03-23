@@ -1,3 +1,7 @@
-api link https://arcane-spire-40682.herokuapp.com/products
+# Basic cart using react context api based on an assesment
 
-live site https://01assignment.netlify.app/
+### api link :
+https://watchcom-server.herokuapp.com/products
+
+### live site :
+https://01assignment.netlify.app/

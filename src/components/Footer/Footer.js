@@ -22,13 +22,13 @@ const Footer = () => {
           <h3 className="title">Follow us on social</h3>
           <div className="icons">
             <h3>
-              <i class="fab fa-facebook"></i>
+              <i className="fab fa-facebook"></i>
             </h3>
             <h3>
-              <i class="fab fa-twitter"></i>
+              <i className="fab fa-twitter"></i>
             </h3>
             <h3>
-              <i class="fab fa-linkedin"></i>
+              <i className="fab fa-linkedin"></i>
             </h3>
           </div>
         </div>

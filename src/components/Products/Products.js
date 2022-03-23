@@ -1,17 +1,12 @@
 import React from "react";
 import "./Products.css";
-import { useEffect, useState } from "react";
 import Product from "../Product/Product";
+import useProducts from "../../hooks/useProducts";
 
-const Products = ({ handleAddToCart }) => {
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    fetch("https://arcane-spire-40682.herokuapp.com/products")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
-  }, []);
+const Products = () => {
+  const { products } = useProducts();
+
   const data = products.slice(0, 6);
-  const data2 = products.slice(6, 12);
 
   return (
     <>
@@ -19,18 +14,14 @@ const Products = ({ handleAddToCart }) => {
 
       <section className="artcle">
         <div className="container">
-          {products.length == 0 ? (
+          {products.length === 0 ? (
             <>
               <h2 className="loading">loading from api .... .</h2>
             </>
           ) : (
             <>
               {data.map((service) => (
-                <Product
-                  key={service.id}
-                  service={service}
-                  handleAddToCart={handleAddToCart}
-                ></Product>
+                <Product key={service._id} service={service}></Product>
               ))}
             </>
           )}

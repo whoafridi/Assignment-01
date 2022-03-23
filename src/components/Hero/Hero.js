@@ -17,7 +17,7 @@ const Hero = () => {
             give you the best products to you
           </p>
           <br></br>
-          <a target="_blank" href="http://github.com">
+          <a href="#">
             Order now
           </a>
         </div>

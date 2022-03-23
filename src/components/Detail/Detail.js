@@ -7,25 +7,24 @@ import NavBar from "../NavBar/NavBar";
 const Detail = () => {
   const { id } = useParams();
 
-  const [cart] = useState([]);
   const [service, setService] = useState([]);
   const [single, setSingle] = useState([]);
 
   useEffect(() => {
-    fetch("https://arcane-spire-40682.herokuapp.com/products")
+    fetch(`https://watchcom-server.herokuapp.com/products`)
       .then((res) => res.json())
       .then((data) => setService(data));
   }, [id]);
 
   useEffect(() => {
-    const values = service.filter((s) => s._id == id);
+    const values = service.filter((s) => s._id === id);
     setSingle(values);
   }, [service]);
 
   return (
     <>
-    <NavBar cart={cart}></NavBar>
-      {service.length == 0 ? (
+      <NavBar></NavBar>
+      {service.length === 0 ? (
         <>
           <h2 className="loading">loading from api .. .. </h2>
         </>
@@ -36,7 +35,7 @@ const Detail = () => {
           ))}
         </>
       )}
-      
+
       <Footer />
     </>
   );
